@@ -18,6 +18,10 @@
   font-weight: 400;
   src: url(../fonts/BreeSerif-Regular.ttf);
 }
+::selection{
+  background-color: #ffc55b;
+  color: black;
+}
 body{
   background-color: #F7ECDE;
 }
