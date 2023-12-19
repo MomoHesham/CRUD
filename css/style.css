@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Pacifico";
+  font-weight: 400;
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "Righteous";
+  font-weight: 400;
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PTSansCaption";
+  font-weight: 400;
+  src: url(../fonts/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: "BreeSerif";
+  font-weight: 400;
+  src: url(../fonts/BreeSerif-Regular.ttf);
+}
+body{
+  background-color: #F7ECDE;
+}
+.bookMarkSection .content {
+  border: 2px dotted #3a3a3a;
+}
+.bookMarkSection h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  position: relative;
+}
+.bookMarkSection h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 70%;
+  bottom: 0;
+  right: 0;
+  background-color: #ffc55b;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.bookMarkSection h1:hover::after{
+  top: 35%;
+}
+.bookMarkSection .content h3 {
+  font-family: "Righteous", cursive;
+  background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #00740e, #f3d605);
+}
+.visit-btn{
+  background-color: rgb(24, 184, 120);
+}
+.visit-btn:hover{
+  background-color: rgb(16, 158, 101);
+}
+.contentTable #siteBody td, #overlay .contentOverlay p{
+  font-family: "PTSansCaption",  sans-serif;
+}
+.contentTable #siteBody td{
+  vertical-align: middle;
+}
+#overlay{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+#overlay .contentOverlay{
+  width: 500px;
+}
+#overlay .contentOverlay h4{
+  font-family: "BreeSerif", serif;
+  font-size: 21px;
+}
+#overlay .contentOverlay .small-circle{
+  width: 20px;
+  height: 20px;
+}
+#overlay .contentOverlay #closeBtn{
+  font-size: 25px;
+  cursor: pointer;
+}
+#overlay .contentOverlay li p{
+  font-size: 18px;
+}
+.input-icon.position-absolute{
+  top: 50%;
+  right: 10px;
+}
+
+input.focusError:focus {
+  box-shadow: 0 0 0 0.3rem rgb(255 0 0 / 25%);
+}
+input.focusCorrect:focus {
+    box-shadow: 0 0 0 0.3rem rgb(57 213 102 / 25%);
+}
+input.validInput:focus,
+input.validURL:focus{
+  box-shadow: 0 0 0 0.3rem rgb(255 197 91 / 30%);
+  border: solid 1px #ffc55b;
+}

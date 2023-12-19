@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/bookmark.ico" type="image/x-icon">
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <section class="pb-5 bookMarkSection">
+    <div class="container py-5">
+      <div class="title text-center">
+        <h1 class="d-inline-block  mb-5">Bookmarker</h1>
+      </div>
+      <div class="content py-4 px-3 border-end-0 border-start-0">
+        <div class="content-title">
+          <h3 class="text-center mb-5 h4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h3>
+        </div>
+        <div class="form-group mb-3">
+          <i class="fa-solid fa-book-bookmark me-2"></i>
+          <label for="siteName" class="fw-bold mb-2">Site Name</label>
+          <div class="position-relative name-input">
+            <input type="text" id="siteName" class="form-control validInput" placeholder="Bookmark Name" />
+            <div class="position-absolute translate-middle-y input-icon">
+              <i id="inputError" class="fa-solid fa-circle-exclamation text-danger d-none"></i>
+              <i id="inputCorrect" class="fa-solid fa-check text-success d-none"></i>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <i class="fa-solid fa-link me-2"></i>
+          <label for="siteURL" class="fw-bold mb-2">Site URL</label>
+          <div class="position-relative name-input">
+            <input type="text" id="siteURL" class="form-control validURL" placeholder="Website URL" />
+            <div class="position-absolute translate-middle-y input-icon">
+              <i id="urlError" class="fa-solid fa-circle-exclamation text-danger d-none"></i>
+              <i id="urlCorrect" class="fa-solid fa-check text-success d-none"></i>
+            </div>
+
+          </div>
+          <div class="text-center">
+            <button onclick="addSite()" class="btn btn-danger w-25 my-3 ">Submit
+          </div>
+        </div>
+
+      </div>
+      <div class="contentTable">
+        <table class="table text-center mt-4">
+          <thead>
+            <tr>
+              <th>
+                Index
+              </th>
+              <th>
+                Website Name
+              </th>
+              <th>
+                Visit
+              </th>
+              <th>
+                Delete
+              </th>
+            </tr>
+          </thead>
+          <tbody id="siteBody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="overlay" class="d-none justify-content-center align-items-center">
+    <div class="contentOverlay bg-white p-4 rounded-2">
+      <div class="header d-flex justify-content-between mb-3">
+        <div class="d-flex">
+          <div class=" rounded-circle bg-danger small-circle me-2"></div>
+          <div class=" rounded-circle bg-warning small-circle me-2"></div>
+          <div class=" rounded-circle bg-success small-circle"></div>
+        </div>
+        <div id="closeBtn" class="">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <h4>Site Name or Url is not valid, Please follow the rules below :</h4>
+      <ul class="list-group">
+        <li class="list-inline-item">
+          <i class="fa-solid fa-circle-arrow-right text-danger me-2"></i>
+          <p class="d-inline-block">Site name must contain at least 3 characters</p>
+        </li>
+        <li class="list-inline-item">
+          <i class="fa-solid fa-circle-arrow-right text-danger me-2"></i>
+          <p class="d-inline-block">Site URL must be a valid one</p>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
