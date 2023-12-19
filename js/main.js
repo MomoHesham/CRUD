@@ -118,7 +118,7 @@ siteURL.addEventListener("input", function () {
     }
 })
 function regexName() {
-    var regex = /^[0-9a-z]{3,}$/;
+    var regex = /^[0-9a-zA-Z]{3,}$/;
     if (regex.test(siteName.value) == true) {
         return true;
     } else {
