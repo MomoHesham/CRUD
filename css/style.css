@@ -49,7 +49,7 @@ body{
 }
 .bookMarkSection .content h3 {
   font-family: "Righteous", cursive;
-  background-clip: text;
+  -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(45deg, #00740e, #f3d605);
 }
